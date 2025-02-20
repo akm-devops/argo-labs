@@ -1,0 +1,12 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: prod-selfsigned-cert
+  namespace: prod
+spec:
+  dnsNames:
+    - prod-vote.ashwingowda.com
+    - prod-vote-preview.ashwingowda.com
+  secretName: prod-selfsigned-cert-tls
+  issuerRef:
+    name: prod-selfsigned-issuer
