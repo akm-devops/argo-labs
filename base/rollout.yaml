@@ -24,7 +24,7 @@ spec:
     spec:
       containers:
       # - image: schoolofdevops/vote:v4
-      - image: argoproj/rollouts-demo:yellow
+      - image: argoproj/rollouts-demo:purple
         name: vote
         imagePullPolicy: Always
         resources: 
