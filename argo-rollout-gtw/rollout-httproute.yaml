@@ -1,0 +1,24 @@
+apiVersion: gateway.networking.k8s.io/v1
+kind: HTTPRoute
+metadata:
+  name: rollouts-http-https
+  namespace: argo-rollouts
+spec:
+  parentRefs:
+    - name: rollouts-gtw
+      sectionName: http
+      kind: Gateway
+    - name: rollouts-gtw
+      sectionName: https
+      kind: Gateway
+  hostnames:
+    - rollouts.ashwingowda.com
+  rules:
+    - matches:
+        - path:
+            type: PathPrefix
+            value: /
+      backendRefs:
+        - name: argo-rollouts-dashboard
+          namespace: argo-rollouts
+          port: 3100

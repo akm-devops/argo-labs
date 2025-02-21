@@ -1,0 +1,11 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: argocd-selfsigned-cert
+  namespace: argocd
+spec:
+  dnsNames:
+    - argocd.ashwingowda.com
+  secretName: argocd-selfsigned-cert-tls
+  issuerRef:
+    name: argocd-selfsigned-issuer

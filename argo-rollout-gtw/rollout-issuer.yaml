@@ -1,0 +1,7 @@
+apiVersion: cert-manager.io/v1
+kind: Issuer
+metadata:
+  name: rollouts-selfsigned-issuer
+  namespace: argo-rollouts
+spec:
+  selfSigned: {}
