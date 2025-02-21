@@ -2,6 +2,11 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
 - ../base
+- prod-rollout-certificate.yaml
+- prod-rollout-gtw.yaml
+- prod-rollout-issuer.yaml
+- prod-vote-httproute.yaml
+- prod-vote-preview-httproute.yaml
 namespace: prod
 commonAnnotations:
   supported-by: sre@example.com
