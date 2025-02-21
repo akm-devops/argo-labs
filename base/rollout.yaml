@@ -23,8 +23,8 @@ spec:
         tier: front
     spec:
       containers:
-      - image: schoolofdevops/vote:v4
-      # - image: argoproj/rollouts-demo:green
+      # - image: schoolofdevops/vote:v4
+      - image: argoproj/rollouts-demo:green
         name: vote
         imagePullPolicy: Always
         resources: 
