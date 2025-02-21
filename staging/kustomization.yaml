@@ -2,6 +2,11 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
 - ../base
+- staging-rollout-certificate.yaml
+- staging-rollout-gtw.yaml
+- staging-rollout-issuer.yaml
+- staging-vote-httproute.yaml
+- staging-vote-preview-httproute.yaml
 namespace: staging
 commonAnnotations:
   supported-by: sre@example.com
