@@ -10,3 +10,14 @@ spec:
   secretName: staging-selfsigned-cert-tls
   issuerRef:
     name: staging-selfsigned-issuer
+  subject:
+    organizations:
+      - "Ashwin Gowda Inc."
+    countries:
+      - "IN"
+    organizationalUnits:
+      - "IT Department"
+    localities:
+      - "Bengaluru"
+    provinces:
+      - "Karnataka"
