@@ -2,4 +2,6 @@ apiVersion: cert-manager.io/v1
 kind: Issuer
 metadata:
   name: new-staging-selfsigned-issuer
-spec: {}
+  namespace: new-staging
+spec:
+  selfSigned: {}

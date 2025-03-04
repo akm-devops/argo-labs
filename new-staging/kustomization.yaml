@@ -4,6 +4,7 @@ resources:
 - ../new-base
 - new-staging-rollout-certificate.yaml
 - new-staging-rollout-gtw.yaml
+- new-staging-rollout-issuer.yaml
 - new-staging-shark-httproute.yaml
 - new-staging-shark-preview-httproute.yaml
 namespace: new-staging
@@ -16,4 +17,3 @@ labels:
 patches:
 - path: service.yaml
 - path: preview-service.yaml
-- path: new-staging-rollout-issuer.yaml
