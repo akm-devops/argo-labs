@@ -9,7 +9,7 @@ spec:
     server: https://kubernetes.default.svc
   project: new-prod
   source:
-    path: prod
+    path: new-prod
     repoURL: https://github.com/akm-devops/argo-labs.git
     targetRevision: main
   syncPolicy:
