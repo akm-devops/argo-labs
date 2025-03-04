@@ -1,0 +1,36 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Rollout
+metadata:
+  labels:
+    app: shark
+    tier: front
+  name: shark
+spec:
+  replicas: 4
+  selector:
+    matchLabels:
+      app: shark
+  strategy:
+    blueGreen:
+      autoPromotionEnabled: true
+      autoPromotionSeconds: 30
+      activeService: shark
+      previewService: shark-preview
+  template:
+    metadata:
+      labels:
+        app: shark
+        tier: front
+    spec:
+      containers:
+      - image: ashwinkmgowda/nodejs-image-demo:36
+        name: shark
+        imagePullPolicy: Always
+        resources: 
+          requests:
+            cpu: "50m"
+            memory: "64Mi"
+          limits: 
+            cpu: "250m"
+            memory: "128Mi"
+

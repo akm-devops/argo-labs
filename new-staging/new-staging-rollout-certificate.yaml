@@ -1,0 +1,23 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: new-staging-selfsigned-cert
+  namespace: new-staging
+spec:
+  dnsNames:
+    - shark.ashwingowda.com
+    - shark-preview.ashwingowda.com
+  secretName: new-staging-selfsigned-cert-tls
+  issuerRef:
+    name: new-staging-selfsigned-issuer
+  subject:
+    organizations:
+      - "Ashwin Gowda Inc."
+    countries:
+      - "IN"
+    organizationalUnits:
+      - "IT Department"
+    localities:
+      - "Bengaluru"
+    provinces:
+      - "Karnataka"

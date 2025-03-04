@@ -1,0 +1,19 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+- ../new-base
+- new-staging-rollout-certificate.yaml
+- new-staging-rollout-gtw.yaml
+- new-staging-rollout-issuer.yaml
+- new-staging-shark-httproute.yaml
+- new-staging-shark-preview-httproute.yaml
+namespace: new-staging
+commonAnnotations:
+  supported-by: sre@ashwingowda.com
+labels:
+- includeSelectors: false
+  pairs:
+    project: shark-web
+patches:
+- path: service.yaml
+- path: preview-service.yaml
