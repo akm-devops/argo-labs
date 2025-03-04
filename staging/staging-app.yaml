@@ -1,6 +1,17 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
+  annotations:
+    argocd-image-updater.argoproj.io/git-branch: main
+    argocd-image-updater.argoproj.io/image-list: myimage=ashwinkmgowda/nodejs-image-demo
+        argocd-image-updater.argoproj.io/myimage.allow-tags: regexp:^\d+$
+    # argocd-image-updater.argoproj.io/myimage.allow-tags: regexp:^[0-9a-f]{2}$
+    # argocd-image-updater.argoproj.io/myimage.ignore-tags: latest, dev
+    argocd-image-updater.argoproj.io/myimage.newest-build: latest
+    argocd-image-updater.argoproj.io/myimage.kustomize.image-name: ashwinkmgowda/nodejs-image-demo
+    argocd-image-updater.argoproj.io/myimage.force-update: "true"
+    argocd-image-updater.argoproj.io/write-back-method: git:secret:argocd/git-creds
+    argocd-image-updater.argoproj.io/write-back-target: "kustomization:../base"
   name: stage-app
   namespace: argocd
 spec:
