@@ -8,7 +8,7 @@ spec:
     # - name: staging-gtw
     #   sectionName: http
     #   kind: Gateway
-    - name: prod-gtw
+    - name: new-prod-gtw
       sectionName: https
       kind: Gateway
   hostnames:
