@@ -7,12 +7,12 @@ spec:
   strategy:
     blueGreen: null
     canary:
-      canaryService: shark-preview # our created canary service
-      stableService: shark # our created stable service
+      canaryService: new-prod-shark-preview # our created canary service
+      stableService: new-prod-shark # our created stable service
       trafficRouting:
         plugins:
           argoproj-labs/gatewayAPI:
-            httpRoute: shark-http-https # our created httproute
+            httpRoute: new-prod-shark-http-https # our created httproute
             namespace: new-prod # namespace where this rollout resides.
       steps:
       - setWeight: 20
