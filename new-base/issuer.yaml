@@ -1,7 +1,6 @@
 apiVersion: cert-manager.io/v1
 kind: Issuer
 metadata:
-  name: new-prod-selfsigned-issuer
-  namespace: new-prod
+  name: selfsigned-issuer
 spec:
   selfSigned: {}

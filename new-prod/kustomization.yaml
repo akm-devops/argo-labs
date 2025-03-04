@@ -1,20 +1,23 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
-- ../new-base
-- new-prod-rollout-certificate.yaml
-- new-prod-rollout-gtw.yaml
-- new-prod-rollout-issuer.yaml
-- new-prod-shark-httproute.yaml
-- new-prod-shark-preview-httproute.yaml
+  - ../new-base
+  - new-prod-rollout-certificate.yaml
+  # - new-prod-rollout-gtw.yaml
+  - new-prod-shark-httproute.yaml
+  - new-prod-shark-preview-httproute.yaml
 namespace: new-prod
 commonAnnotations:
   supported-by: sre@ashwingowda.com
+namePrefix: new-prod-
 labels:
-- includeSelectors: false
-  pairs:
-    project: shark-web
+  - includeSelectors: false
+    pairs:
+      project: shark-web
 patches:
-- path: service.yaml
-- path: preview-service.yaml
-- path: rollout.yaml
+  - path: service.yaml
+  - path: preview-service.yaml
+  - path: rollout.yaml
+  - path: new-prod-rollout-gtw.yaml
+# patchesStrategicMerge:
+#   - path: issuer-patch.yaml

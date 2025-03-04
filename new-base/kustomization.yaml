@@ -4,6 +4,8 @@ resources:
 - rollout.yaml
 - service.yaml
 - preview-service.yaml
+- issuer.yaml
+- gtw.yaml
 images:
 - name: ashwinkmgowda/nodejs-image-demo
   newName: ashwinkmgowda/nodejs-image-demo
