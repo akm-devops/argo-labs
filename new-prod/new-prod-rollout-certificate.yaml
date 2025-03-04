@@ -2,11 +2,11 @@ apiVersion: cert-manager.io/v1
 kind: Certificate
 metadata:
   name: prod-selfsigned-cert
-  namespace: prod
+  namespace: new-prod
 spec:
   dnsNames:
     - prod-shark.ashwingowda.com
     - prod-shark-preview.ashwingowda.com
-  secretName: prod-selfsigned-cert-tls
+  secretName: new-prod-selfsigned-cert-tls
   issuerRef:
     name: new-prod-selfsigned-issuer
