@@ -18,7 +18,7 @@ spec:
   destination:
     namespace: new-staging
     server: https://kubernetes.default.svc
-  project: stage
+  project: new-staging
   source:
     path: new-staging
     repoURL: https://github.com/akm-devops/argo-labs.git
