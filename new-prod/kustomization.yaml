@@ -2,7 +2,7 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
   - ../new-base
-  - new-prod-rollout-certificate.yaml
+  # - new-prod-rollout-certificate.yaml
   # - new-prod-rollout-gtw.yaml
   # - new-prod-shark-httproute.yaml
   # - new-prod-shark-preview-httproute.yaml
@@ -21,5 +21,6 @@ patches:
   - path: new-prod-rollout-gtw.yaml
   - path: httproute-patch.yaml
   - path: httproute-preview-patch.yaml
+  - path: certificate-patch.yaml
 # patchesStrategicMerge:
 #   - path: issuer-patch.yaml

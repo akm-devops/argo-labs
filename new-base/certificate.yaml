@@ -1,0 +1,22 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: selfsigned-cert
+spec:
+  dnsNames:
+    - base.ashwingowda.com
+    - base-preview.ashwingowda.com
+  secretName: selfsigned-cert-tls
+  issuerRef:
+    name: selfsigned-issuer
+  subject:
+    organizations:
+      - "Ashwin Gowda Inc."
+    countries:
+      - "IN"
+    organizationalUnits:
+      - "IT Department"
+    localities:
+      - "Bengaluru"
+    provinces:
+      - "Karnataka"

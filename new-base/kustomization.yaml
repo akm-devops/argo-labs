@@ -8,6 +8,7 @@ resources:
 - gtw.yaml
 - httproute.yaml
 - httproute-preview.yaml
+- certificate.yaml
 images:
 - name: ashwinkmgowda/nodejs-image-demo
   newName: ashwinkmgowda/nodejs-image-demo
