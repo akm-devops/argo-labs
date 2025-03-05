@@ -19,7 +19,6 @@ patches:
 - path: service.yaml
 - path: preview-service.yaml
 - path: new-staging-rollout-gtw.yaml
-- path: new-staging-rollout-issuer.yaml
 - path: httproute-patch.yaml
 - path: httproute-preview-patch.yaml
 
