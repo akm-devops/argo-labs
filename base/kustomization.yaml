@@ -4,7 +4,12 @@ resources:
 - rollout.yaml
 - service.yaml
 - preview-service.yaml
+# images:
+# - name: ashwinkmgowda/nodejs-image-demo
+#   newName: ashwinkmgowda/nodejs-image-demo
+#   newTag: "39"
+
 images:
 - name: ashwinkmgowda/nodejs-image-demo
   newName: ashwinkmgowda/nodejs-image-demo
-  newTag: "38"
+  newTag: "39"
