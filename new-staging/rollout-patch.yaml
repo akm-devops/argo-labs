@@ -12,7 +12,7 @@ spec:
     blueGreen:
       autoPromotionEnabled: true
       autoPromotionSeconds: 30
-      activeService: shark
-      previewService: shark-preview
+      activeService: new-staging-shark
+      previewService: new-staging-shark-preview
 
 
