@@ -10,11 +10,12 @@ spec:
     name: new-staging-gtw
     sectionName: https
   rules:
-  - matches:
-    - path:
-        type: PathPrefix
-        value: /
-    backendRefs:
+  - backendRefs:
     - name: new-staging-shark-preview
       namespace: new-staging
       port: 80
+    matches:
+    - path:
+        type: PathPrefix
+        value: /
+

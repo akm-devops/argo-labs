@@ -14,9 +14,6 @@ spec:
     - name: new-staging-shark
       namespace: new-staging
       port: 80
-    - name: new-staging-shark-preview
-      namespace: new-staging
-      port: 80
     matches:
     - path:
         type: PathPrefix
