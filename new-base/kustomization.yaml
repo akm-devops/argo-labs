@@ -12,4 +12,4 @@ resources:
 images:
 - name: ashwinkmgowda/nodejs-image-demo
   newName: ashwinkmgowda/nodejs-image-demo
-  newTag: "41"
+  newTag: "42"
