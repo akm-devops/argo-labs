@@ -1,0 +1,11 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: selfsigned-cert
+spec:
+  dnsNames:
+    - shark.ashwingowda.com
+    - shark-preview.ashwingowda.com
+  secretName: new-prod-selfsigned-cert-tls
+  issuerRef:
+    name: new-staging-selfsigned-issuer
