@@ -15,7 +15,7 @@ spec:
     countries:
       - "IN"
     organizationalUnits:
-      - "IT Department"
+      - "DevOps"
     localities:
       - "Bengaluru"
     provinces:

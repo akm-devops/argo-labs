@@ -9,14 +9,3 @@ spec:
   secretName: new-prod-selfsigned-cert-tls
   issuerRef:
     name: new-prod-selfsigned-issuer
-  # subject:
-  #   organizations:
-  #     - "Ashwin Gowda Inc."
-  #   countries:
-  #     - "IN"
-  #   organizationalUnits:
-  #     - "IT Department"
-  #   localities:
-  #     - "Bengaluru"
-  #   provinces:
-  #     - "Karnataka"
