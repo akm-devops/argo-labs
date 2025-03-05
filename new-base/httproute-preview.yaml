@@ -1,0 +1,27 @@
+apiVersion: gateway.networking.k8s.io/v1
+kind: HTTPRoute
+metadata:
+  annotations:
+    supported-by: sre@ashwingowda.com
+  labels:
+    project: shark-web
+  name: shark-preview-http-https
+spec:
+  hostnames:
+  - shark-preview.ashwingowda.com
+  parentRefs:
+  - kind: Gateway
+    name: gtw
+    sectionName: https
+  rules:
+  - backendRefs:
+    - name: shark
+      namespace: default
+      port: 80
+    - name: shark-preview
+      namespace: default
+      port: 80
+    matches:
+    - path:
+        type: PathPrefix
+        value: /

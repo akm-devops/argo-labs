@@ -4,8 +4,8 @@ resources:
   - ../new-base
   - new-prod-rollout-certificate.yaml
   # - new-prod-rollout-gtw.yaml
-  - new-prod-shark-httproute.yaml
-  - new-prod-shark-preview-httproute.yaml
+  # - new-prod-shark-httproute.yaml
+  # - new-prod-shark-preview-httproute.yaml
 namespace: new-prod
 commonAnnotations:
   supported-by: sre@ashwingowda.com
@@ -19,5 +19,8 @@ patches:
   - path: preview-service.yaml
   - path: rollout.yaml
   - path: new-prod-rollout-gtw.yaml
+  - path: httproute-patch.yaml
+  - path: httproute-preview-patch.yaml
+  - path: httproute-preview-patch.yaml
 # patchesStrategicMerge:
 #   - path: issuer-patch.yaml
