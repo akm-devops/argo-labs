@@ -3,13 +3,14 @@ kind: Kustomization
 resources:
 - ../new-base
 - new-staging-rollout-certificate.yaml
-- new-staging-rollout-gtw.yaml
-- new-staging-rollout-issuer.yaml
-- new-staging-shark-httproute.yaml
-- new-staging-shark-preview-httproute.yaml
+# - new-staging-rollout-gtw.yaml
+# - new-staging-rollout-issuer.yaml
+# - new-staging-shark-httproute.yaml
+# - new-staging-shark-preview-httproute.yaml
 namespace: new-staging
 commonAnnotations:
   supported-by: sre@ashwingowda.com
+namePrefix: new-staging-
 labels:
 - includeSelectors: false
   pairs:
@@ -17,3 +18,8 @@ labels:
 patches:
 - path: service.yaml
 - path: preview-service.yaml
+- path: new-staging-rollout-gtw.yaml
+- path: new-staging-rollout-issuer.yaml
+- path: httproute-patch.yaml
+- path: httproute-preview-patch.yaml
+
