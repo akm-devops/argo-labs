@@ -21,4 +21,5 @@ patches:
 - path: new-staging-rollout-gtw.yaml
 - path: httproute-patch.yaml
 - path: httproute-preview-patch.yaml
+- path: rollout-patch.yaml
 

@@ -15,9 +15,9 @@ labels:
     pairs:
       project: shark-web
 patches:
-  - path: service.yaml
-  - path: preview-service.yaml
-  - path: rollout.yaml
+  - path: service-patch.yaml
+  - path: preview-service-patch.yaml
+  - path: rollout-patch.yaml
   - path: new-prod-rollout-gtw.yaml
   - path: httproute-patch.yaml
   - path: httproute-preview-patch.yaml
