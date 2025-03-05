@@ -4,8 +4,8 @@ metadata:
   name: selfsigned-cert
 spec:
   dnsNames:
-    - new-prod-shark.ashwingowda.com
-    - new-prod-shark-preview.ashwingowda.com
+    - prod-shark.ashwingowda.com
+    - prod-shark-preview.ashwingowda.com
   secretName: new-prod-selfsigned-cert-tls
   issuerRef:
     name: new-prod-selfsigned-issuer
