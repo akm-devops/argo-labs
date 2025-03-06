@@ -14,14 +14,14 @@ spec:
     - name: new-prod-shark
       namespace: new-prod
       port: 80
-    - name: new-prod-shark-preview
-      namespace: new-prod
-      port: 80
+    # - name: new-prod-shark-preview
+    #   namespace: new-prod
+    #   port: 80
     matches:
     - path:
         type: PathPrefix
         value: /
-    - filters:
-        - type: RequestRedirect
-          requestRedirect:
-            scheme: https
+  - filters:
+      - type: RequestRedirect
+        requestRedirect:
+          scheme: https
