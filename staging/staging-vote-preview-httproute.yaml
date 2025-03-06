@@ -22,8 +22,4 @@ spec:
         - name: vote-preview
           namespace: staging
           port: 80
-    - filters:
-        - type: RequestRedirect
-          requestRedirect:
-            scheme: https
-            
+         

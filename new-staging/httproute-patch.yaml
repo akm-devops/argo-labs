@@ -18,7 +18,3 @@ spec:
     - path:
         type: PathPrefix
         value: /
-  - filters:
-      - type: RequestRedirect
-        requestRedirect:
-          scheme: https
