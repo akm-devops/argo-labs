@@ -10,3 +10,14 @@ spec:
   secretName: kube-prom-selfsigned-cert-tls
   issuerRef:
     name: kube-prom-selfsigned-issuer
+  subject:
+    organizations:
+      - "Ashwin Gowda Inc."
+    countries:
+      - "IN"
+    organizationalUnits:
+      - "DevOps"
+    localities:
+      - "Bengaluru"
+    provinces:
+      - "Karnataka"

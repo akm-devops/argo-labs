@@ -19,6 +19,11 @@ spec:
             type: PathPrefix
             value: /
       backendRefs:
-        - name: kube-prom-grafana
+        - name: prometheus-stack-grafana
           namespace: monitoring
           port: 80
+
+    - filters:
+        - type: RequestRedirect
+          requestRedirect:
+            scheme: https
