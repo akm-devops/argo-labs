@@ -22,8 +22,3 @@ spec:
         - name: argocd-server
           namespace: argocd
           port: 80
-    - filters:
-      - type: RequestRedirect
-        requestRedirect:
-          scheme: https
-          statusCode: 301
