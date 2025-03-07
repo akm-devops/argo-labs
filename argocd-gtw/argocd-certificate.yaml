@@ -9,3 +9,14 @@ spec:
   secretName: argocd-selfsigned-cert-tls
   issuerRef:
     name: argocd-selfsigned-issuer
+  subject:
+    organizations:
+      - "Ashwin Gowda Inc."
+    countries:
+      - "IN"
+    organizationalUnits:
+      - "DevOps"
+    localities:
+      - "Bengaluru"
+    provinces:
+      - "Karnataka"
